@@ -1,9 +1,18 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("hello in the index of the app!")
+    return render(
+request,
+'pages/index.html',
+{
+"name" : "ali ahmed aliii",
+"age": 2**240,
+
+
+}
+
+)
 def  about(request):
-    return HttpResponse("hello in about")
+    pass
 
 # Create your views here.
